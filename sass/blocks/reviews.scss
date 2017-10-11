@@ -1,0 +1,15 @@
+.reviews {
+  @include inner;
+  padding-top: 20px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    padding-top: 112px;
+    margin-bottom: 20px;
+    background: url("../img/icon-quotes.svg") no-repeat top center;
+  }
+}

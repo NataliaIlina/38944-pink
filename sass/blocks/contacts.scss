@@ -1,0 +1,143 @@
+.contacts {
+  text-align: center;
+  padding-top: 43px;
+
+  @include desktop {
+    padding-top: 65px;
+  }
+}
+
+.contacts__title {
+  @include font(24px, 1.2);
+  font-weight: $light;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @include tablet {
+    @include font(40px, 1.2);
+    width: 400px;
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    @include font(50px, 1.2);
+    width: 600px;
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__info {
+  position: relative;
+  @include inner;
+  @include font(18px, 1.2);
+  font-weight: $bold;
+  margin-bottom: 40px;
+
+  @include tablet {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__phone,
+.contacts__email,
+.contacts__address {
+  @include line(green);
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include tablet {
+    width: 45%;
+    margin-bottom: 48px;
+  }
+
+  @include desktop {
+    width: 31.5%;
+  }
+}
+
+.contacts__phone {
+  @include tablet {
+    margin-right: 40px;
+  }
+
+  @include desktop {
+    margin-right: 0;
+  }
+}
+
+.contacts__address {
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__email {
+  @include desktop {
+    order: 2;
+  }
+}
+
+
+.contacts__link {
+  display: block;
+  color: $pink;
+  @include font(24px, 1.2);
+  font-weight: $light;
+  padding-top: 5px;
+
+  @include tablet {
+    padding-top: 8px;
+  }
+
+  @include desktop {
+    padding-top: 23px;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 34px;
+    background: url("../img/bg-triangle-white-footer.svg") no-repeat top center;
+    background-size: 100% auto;
+
+    @include tablet {
+      height: 72px;
+    }
+    @include desktop {
+      height: 100px;
+    }
+  }
+}
+
+.contacts__map-inner {
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+  height: 200px;
+
+  @include tablet {
+    height: 375px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+
+  @include desktop {
+    height: 495px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
+}

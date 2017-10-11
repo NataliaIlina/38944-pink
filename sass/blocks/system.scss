@@ -1,0 +1,44 @@
+.system {
+  width: 205px;
+  height: 58px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+
+  @include desktop {
+    margin-bottom: 55px;
+  }
+}
+
+.system__link {
+  @include image-replacement;
+  width: 48px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--microsoft {
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}

@@ -1,0 +1,146 @@
+.table {
+  border-collapse: collapse;
+  width: 300%;
+  margin-bottom: 30px;
+  transition: transform 0.5s ease-in;
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.table__cell:first-of-type,
+th:first-of-type {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.table__header {
+  color: $white;
+}
+
+.table__head-cell {
+  background-color: $blue-dark;
+  border: 2px solid #e5e5e5;
+  padding: 17px 0;
+  position: relative;
+
+  &--hit {
+    background: $blue-dark url("../img/bg-hit.svg") no-repeat;
+  }
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    @include font(14px, 30px);
+    font-weight: $normal;
+    top: 0;
+    left: 0;
+    padding: 8px;
+  }
+
+  @include tablet {
+    padding: 10px;
+
+    &--hit {
+      background: $blue-dark url("../img/bg-hit-tablet.svg") no-repeat;
+    }
+
+    &--hit::after {
+      padding: 4px;
+    }
+  }
+
+  @include desktop {
+    padding: 17px;
+
+    &--hit {
+      background: $blue-dark url("../img/bg-hit.svg") no-repeat;
+    }
+
+    &--hit::after {
+      padding: 8px;
+    }
+  }
+}
+
+.table__title {
+  display: block;
+  @include font(18px, 30px);
+  font-weight: $bold;
+  text-transform: uppercase;
+
+  @include tablet {
+    @include font(16px, 30px);
+  }
+
+  @include desktop {
+    @include font(18px, 30px);
+  }
+}
+
+.table__price {
+  @include font(24px, 30px);
+  font-weight: $light;
+  text-transform: uppercase;
+
+  @include tablet {
+    @include font(18px, 30px);
+  }
+
+  @include desktop {
+    @include font(24px, 30px);
+  }
+}
+
+.table__cell {
+  background-color: $white;
+  @include font(14px, 30px);
+  text-transform: uppercase;
+  padding: 15px;
+  padding-left: 22px;
+  border: 2px solid #e5e5e5;
+
+  @include tablet {
+    text-transform: none;
+    width: 25%;
+    padding: 0;
+    padding-left: 15px;
+    height: 44px;
+
+    span {
+      display: none;
+    }
+
+    &:first-of-type {
+      width: 155px;
+    }
+  }
+
+  @include desktop {
+    @include font(18px, 30px);
+    height: 58px;
+    padding-left: 20px;
+  }
+}
+
+.table__cell--yes {
+  background: $white url("../img/icon-yes.svg") no-repeat right 17px center;
+  background-size: 31px 21px;
+
+  @include tablet {
+    background-position: center;
+  }
+}
+
+.table__cell--no {
+  background: $white url("../img/icon-no.svg") no-repeat right 20px center;
+
+  @include tablet {
+    background-position: center;
+  }
+}

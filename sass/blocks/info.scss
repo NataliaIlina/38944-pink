@@ -1,0 +1,105 @@
+.info {
+  margin-bottom: 100px;
+  padding-top: 58px;
+
+  @include mobile-only {
+    display: none;
+  }
+
+  @include desktop {
+    padding-top: 35px;
+    padding-bottom: 65px;
+    background-color: $gray;
+    margin-bottom: 75px;
+  }
+}
+
+.info__inner {
+  @include inner;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__timer {
+  position: relative;
+  background: url("../img/icon-timer.svg") no-repeat center;
+  background-size: contain;
+  width: 238px;
+  height: 276px;
+  @include line(orange);
+  margin-right: 70px;
+
+  @include desktop {
+    width: 298px;
+    height: 345px;
+  }
+
+  &::after {
+    content: "24";
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    @include font(96px, 170px);
+    color: $pink;
+    border: 14px solid $pink;
+    border-radius: 50%;
+    width: 202px;
+    height: 202px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: $bold;
+
+    @include desktop {
+      @include font(120px, 200px);
+      bottom: 22px;
+      left: 22px;
+      border-width: 17px;
+      width: 253px;
+      height: 253px;
+    }
+  }
+}
+
+.info__content {
+  width: 310px;
+  flex-grow: 2;
+  height: 100%;
+  padding-top: 15px;
+
+  @include desktop {
+    margin-top: 52px;
+  }
+}
+
+.info__title {
+  color: $black;
+  @include font(30px, 36px);
+  width: 200px;
+  margin: 25px 0 10px;
+
+  @include desktop {
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.info__description {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include desktop {
+    padding-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.info__link {
+  color: $pink;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    opacity: 0.6;
+  }
+}

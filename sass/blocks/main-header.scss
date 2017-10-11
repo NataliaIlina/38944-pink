@@ -1,0 +1,213 @@
+.main-header {
+  color: $white;
+  background-color: $blue-dark-bg;
+}
+
+.main-header__top {
+  position: relative;
+  z-index: 5;
+  background-color: rgba($blue-dark-bg, 0.3);
+}
+
+.main-header__inner {
+  @include inner;
+  padding: 0;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  @include desktop {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.main-header__content {
+  position: relative;
+  margin-top: -66px;
+  background-color: $blue-dark-bg;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 730px;
+
+  @include tablet {
+    margin-top: -110px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center top;
+  }
+
+  @include desktop {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+    height: 853px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 258px;
+    height: 286px;
+    top: 175px;
+    left: calc(50% - 170px);
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+
+    @include tablet {
+      bottom: 0;
+      top: auto;
+      width: 520px;
+      height: 545px;
+      left: calc(50% - 170px);
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+      background-position: right bottom;
+    }
+
+    @include desktop {
+      width: 620px;
+      height: 650px;
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+      background-position: right -145px bottom;
+    }
+  }
+}
+
+.main-header__content-inner {
+  @include inner;
+  display: flex;
+  height: 100%;
+}
+
+.main-header__promo {
+  box-sizing: border-box;
+  width: 320px;
+  padding: 30px 0 20px;
+  margin: 0 auto;
+  margin-top: auto;
+  text-align: center;
+  z-index: 5;
+
+  @include tablet {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: 80px;
+    width: 300px;
+  }
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
+}
+
+.main-header__slogan {
+  display: none;
+
+  @include tablet {
+    display: block;
+    @include font(40px, 1.2);
+    font-weight: $light;
+  }
+
+  @include desktop {
+    @include font(50px, 1.2);
+    margin-bottom: 55px;
+  }
+}
+
+.main-header__description {
+  font-weight: $light;
+  margin: 10px 0;
+  @include font(14px, 24px);
+
+  @include tablet {
+    @include font(18px, 24px);
+  }
+}
+
+.main-header__toggle {
+  @include image-replacement;
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  top: 0;
+  height: 66px;
+  width: 52px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 52px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $pink;
+    box-shadow: 0 10px 0 0 $pink, 0 20px 0 0 $pink;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    top: 26px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-header__toggle--cross {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 32px;
+    height: 4px;
+    background-color: $white;
+    transform: rotate(45deg);
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $pink;
+    box-shadow: none;
+  }
+}
+
+.main-header__button {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    margin-bottom: 65px;
+  }
+}
