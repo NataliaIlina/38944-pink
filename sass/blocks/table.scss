@@ -1,7 +1,7 @@
 .table {
-  border-collapse: collapse;
   width: 300%;
   margin-bottom: 30px;
+  border-collapse: collapse;
   transition: transform 0.5s ease-in;
 
   @include tablet {
@@ -22,26 +22,10 @@ th:first-of-type {
 }
 
 .table__head-cell {
+  position: relative;
+  padding: 17px 0;
   background-color: $blue-dark;
   border: 2px solid #e5e5e5;
-  padding: 17px 0;
-  position: relative;
-
-  &--hit {
-    background: $blue-dark url("../img/bg-hit.svg") no-repeat;
-  }
-
-  &--hit::after {
-    content: "Хит";
-    position: absolute;
-    transform: rotate(-45deg);
-    text-transform: uppercase;
-    @include font(14px, 30px);
-    font-weight: $normal;
-    top: 0;
-    left: 0;
-    padding: 8px;
-  }
 
   @include tablet {
     padding: 10px;
@@ -66,13 +50,29 @@ th:first-of-type {
       padding: 8px;
     }
   }
+
+  &--hit {
+    background: $blue-dark url("../img/bg-hit.svg") no-repeat;
+  }
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    font-weight: $normal;
+    text-transform: uppercase;
+    transform: rotate(-45deg);
+    @include font(14px, 30px);
+  }
 }
 
 .table__title {
   display: block;
-  @include font(18px, 30px);
   font-weight: $bold;
   text-transform: uppercase;
+  @include font(18px, 30px);
 
   @include tablet {
     @include font(16px, 30px);
@@ -84,9 +84,9 @@ th:first-of-type {
 }
 
 .table__price {
-  @include font(24px, 30px);
   font-weight: $light;
   text-transform: uppercase;
+  @include font(24px, 30px);
 
   @include tablet {
     @include font(18px, 30px);
@@ -98,19 +98,19 @@ th:first-of-type {
 }
 
 .table__cell {
-  background-color: $white;
-  @include font(14px, 30px);
-  text-transform: uppercase;
   padding: 15px;
   padding-left: 22px;
+  text-transform: uppercase;
+  background-color: $white;
   border: 2px solid #e5e5e5;
+  @include font(14px, 30px);
 
   @include tablet {
-    text-transform: none;
     width: 25%;
+    height: 44px;
     padding: 0;
     padding-left: 15px;
-    height: 44px;
+    text-transform: none;
 
     span {
       display: none;
@@ -122,9 +122,9 @@ th:first-of-type {
   }
 
   @include desktop {
-    @include font(18px, 30px);
     height: 58px;
     padding-left: 20px;
+    @include font(18px, 30px);
   }
 }
 

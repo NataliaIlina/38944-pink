@@ -1,15 +1,15 @@
 .advantages {
+  margin-bottom: 23px;
+  text-align: center;
   background-color: $gray;
   background-image: url("../img/bg-triangle-white.svg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: center top;
-  text-align: center;
-  margin-bottom: 23px;
 
   @include tablet {
-    text-align: left;
     margin-bottom: 0;
+    text-align: left;
   }
 
   @include desktop {
@@ -24,18 +24,18 @@
   background: url("../img/iphone-screen-mobile@1x.png") no-repeat center bottom -45px;
 
   @include tablet {
-    padding-left: 310px;
     padding-top: 50px;
     padding-bottom: 25px;
+    padding-left: 310px;
     background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 20px top;
   }
 
   @include desktop {
-    background-image: none;
     display: flex;
-    padding-left: 10px;
-    padding-top: 0;
     justify-content: space-between;
+    padding-top: 0;
+    padding-left: 10px;
+    background-image: none;
   }
 }
 
@@ -44,7 +44,6 @@
 }
 
 .advantages__block {
-  @include line(orange);
   padding: 26px 10px 10px;
   margin-bottom: 0;
 
@@ -55,9 +54,9 @@
   }
 
   @include desktop {
+    width: 32%;
     padding: 0;
     padding-top: 355px;
-    width: 32%;
     background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat top center;
 
     &:first-child {
@@ -72,9 +71,9 @@
 
 .advantages__title {
   @include font(18px, 24px);
-  color: $black;
   margin: 0;
   margin-bottom: 10px;
+  color: $black;
 
   @include tablet {
     margin-bottom: 12px;

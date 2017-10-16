@@ -1,6 +1,6 @@
 .contacts {
-  text-align: center;
   padding-top: 43px;
+  text-align: center;
 
   @include desktop {
     padding-top: 65px;
@@ -9,30 +9,30 @@
 
 .contacts__title {
   @include font(24px, 1.2);
-  font-weight: $light;
   width: 250px;
   margin: 0 auto;
   margin-bottom: 40px;
+  font-weight: $light;
 
   @include tablet {
-    @include font(40px, 1.2);
     width: 400px;
     margin-bottom: 45px;
+    @include font(40px, 1.2);
   }
 
   @include desktop {
-    @include font(50px, 1.2);
     width: 600px;
     margin-bottom: 60px;
+    @include font(50px, 1.2);
   }
 }
 
 .contacts__info {
-  position: relative;
   @include inner;
   @include font(18px, 1.2);
-  font-weight: $bold;
+  position: relative;
   margin-bottom: 40px;
+  font-weight: $bold;
 
   @include tablet {
     display: flex;
@@ -50,7 +50,6 @@
 .contacts__phone,
 .contacts__email,
 .contacts__address {
-  @include line(green);
   margin: 0;
   margin-bottom: 23px;
 
@@ -58,7 +57,6 @@
     width: 45%;
     margin-bottom: 48px;
   }
-
   @include desktop {
     width: 31.5%;
   }
@@ -88,11 +86,11 @@
 
 
 .contacts__link {
-  display: block;
-  color: $pink;
   @include font(24px, 1.2);
-  font-weight: $light;
+  display: block;
   padding-top: 5px;
+  font-weight: $light;
+  color: $pink;
 
   @include tablet {
     padding-top: 8px;
@@ -121,6 +119,7 @@
     @include tablet {
       height: 72px;
     }
+
     @include desktop {
       height: 100px;
     }
@@ -128,8 +127,8 @@
 }
 
 .contacts__map-inner {
-  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
   height: 200px;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
 
   @include tablet {
     height: 375px;

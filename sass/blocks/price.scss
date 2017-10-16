@@ -1,18 +1,18 @@
 .price {
   background-color: $gray;
   background-image: url("../img/bg-triangle-white.svg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: center top;
 }
 
 .price__inner {
-  overflow: hidden;
   @include inner;
-  padding-top: 90px;
-  padding-bottom: 35px;
   display: flex;
   flex-direction: column;
+  padding-top: 90px;
+  padding-bottom: 35px;
+  overflow: hidden;
 
   @include tablet {
     padding-top: 87px;
@@ -26,14 +26,14 @@
 }
 
 .price__controls {
-  margin: 0 auto;
-  width: 65px;
-  height: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
   order: 2;
+  width: 65px;
+  height: 12px;
+  padding: 10px 0;
+  margin: 0 auto;
 
   @include tablet {
     display: none;
@@ -43,10 +43,10 @@
 .price__toggle {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
-  border: 3px solid $gray;
-  background-color: rgba($blue-dark, 0.3);
   cursor: pointer;
+  background-color: rgba($blue-dark, 0.3);
+  border: 3px solid $gray;
+  border-radius: 50%;
   transition: all 0.3s ease;
 
   &:hover {
@@ -61,8 +61,8 @@
 .price__radio--first:checked ~ .price__controls .price__toggle--first,
 .price__radio--second:checked ~ .price__controls .price__toggle--second,
 .price__radio--third:checked ~ .price__controls .price__toggle--third {
-  border-color: $blue-dark;
   background-color: $white;
+  border-color: $blue-dark;
 }
 
 @include mobile-only {

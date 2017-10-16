@@ -6,11 +6,11 @@
 }
 
 .slider__item {
-  margin: 0;
+  @include font(14px, 30px);
   display: flex;
   flex-direction: column;
+  margin: 0;
   margin-bottom: 23px;
-  @include font(14px, 30px);
 
   @include tablet {
     @include font(18px, 30px);
@@ -22,19 +22,19 @@
 }
 
 .slider__author {
-  @include font(18px, 30px);
-  color: $black;
-  font-style: normal;
   margin-bottom: 12px;
+  font-style: normal;
+  color: $black;
+  @include font(18px, 30px);
 
   @include mobile-only {
     order: -1;
   }
 
   @include tablet {
-    @include font(20px, 30px);
-    margin-bottom: 0;
     padding-top: 35px;
+    margin-bottom: 0;
+    @include font(20px, 30px);
   }
 
   @include desktop {
@@ -46,10 +46,10 @@
   display: none;
 
   @include tablet {
-    @include font( 14px, 30px);
     display: block;
-    color: $blue-dark;
     padding-top: 3px;
+    color: $blue-dark;
+    @include font( 14px, 30px);
   }
 
   @include desktop {
@@ -58,13 +58,16 @@
 }
 
 .slider__button {
+  position: absolute;
+  top: 20px;
   width: 40px;
   height: 60px;
-  position: absolute;
-  @include line(orange);
   cursor: pointer;
-  top: 20px;
   opacity: 30%;
+
+  @include device-only {
+    display: none;
+  }
 
   &--prev {
     left: 0;
@@ -75,22 +78,17 @@
     right: 0;
     background: url("../img/icon-review-arrow-right.svg") no-repeat right center;
   }
-
-
-  @include device-only {
-    display: none;
-  }
 }
 
 .slider__controls {
-  margin: 0 auto;
-  width: 65px;
-  height: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
   order: 2;
+  width: 65px;
+  height: 12px;
+  padding: 10px 0;
+  margin: 0 auto;
 
   @include desktop {
     display: none;
@@ -100,10 +98,10 @@
 .slider__toggle {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
-  border: 3px solid $white;
-  background-color: rgba($blue-dark, 0.3);
   cursor: pointer;
+  background-color: rgba($blue-dark, 0.3);
+  border: 3px solid $white;
+  border-radius: 50%;
   transition: all 0.3s ease;
 
   &:hover {
@@ -118,6 +116,6 @@
 .slider__radio--first:checked ~ .slider__controls .slider__toggle--first,
 .slider__radio--second:checked ~ .slider__controls .slider__toggle--second,
 .slider__radio--third:checked ~ .slider__controls .slider__toggle--third {
-  border-color: $blue-dark;
   background-color: $white;
+  border-color: $blue-dark;
 }

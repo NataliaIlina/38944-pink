@@ -13,16 +13,16 @@
 
 .main-content__title {
   @include font(24px, 1.2);
-  font-weight: $light;
-  text-align: center;
   width: 220px;
   margin: 0 auto;
   margin-bottom: 30px;
+  font-weight: $light;
+  text-align: center;
 
   @include tablet {
-    @include font(40px, 1.2);
-    margin-bottom: 0;
     width: 620px;
+    margin-bottom: 0;
+    @include font(40px, 1.2);
 
     &:last-of-type {
       width: 450px;
@@ -31,8 +31,8 @@
   }
 
   @include desktop {
-    @include font(50px, 1.2);
     width: 750px;
+    @include font(50px, 1.2);
 
     &:last-of-type {
       width: 450px;

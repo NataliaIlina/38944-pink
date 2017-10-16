@@ -1,8 +1,10 @@
 .page-footer {
   @include inner;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @include tablet {
     flex-direction: row;
@@ -26,11 +28,11 @@
   display: block;
   width: 146px;
   height: 40px;
-  // padding: 35px 0;
-  @include line(green);
+  margin-bottom: 40px;
 
   @include tablet {
     padding-bottom: 10px;
+    margin-bottom: 0;
   }
 
   &:hover .page-footer__icon,
@@ -70,22 +72,22 @@
 }
 
 .page-footer__copyright {
-  color: $blue-dark;
-  @include font(14px, 18px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 128px;
   height: 34px;
+  color: $blue-dark;
+  @include font(14px, 18px);
 
   @include tablet {
     padding-left: 18px;
   }
 
   @include desktop {
-    @include font(18px, 18px);
     width: 155px;
     padding-left: 0;
+    @include font(18px, 18px);
   }
 }
 

@@ -1,6 +1,6 @@
 .info {
-  margin-bottom: 100px;
   padding-top: 58px;
+  margin-bottom: 100px;
 
   @include mobile-only {
     display: none;
@@ -9,8 +9,8 @@
   @include desktop {
     padding-top: 35px;
     padding-bottom: 65px;
-    background-color: $gray;
     margin-bottom: 75px;
+    background-color: $gray;
   }
 }
 
@@ -22,12 +22,11 @@
 
 .info__timer {
   position: relative;
-  background: url("../img/icon-timer.svg") no-repeat center;
-  background-size: contain;
   width: 238px;
   height: 276px;
-  @include line(orange);
   margin-right: 70px;
+  background: url("../img/icon-timer.svg") no-repeat center;
+  background-size: contain;
 
   @include desktop {
     width: 298px;
@@ -36,33 +35,33 @@
 
   &::after {
     content: "24";
+    @include font(96px, 170px);
     position: absolute;
     bottom: 18px;
     left: 18px;
-    @include font(96px, 170px);
-    color: $pink;
-    border: 14px solid $pink;
-    border-radius: 50%;
+    box-sizing: border-box;
     width: 202px;
     height: 202px;
-    box-sizing: border-box;
-    text-align: center;
     font-weight: $bold;
+    color: $pink;
+    text-align: center;
+    border: 14px solid $pink;
+    border-radius: 50%;
 
     @include desktop {
       @include font(120px, 200px);
       bottom: 22px;
       left: 22px;
-      border-width: 17px;
       width: 253px;
       height: 253px;
+      border-width: 17px;
     }
   }
 }
 
 .info__content {
-  width: 310px;
   flex-grow: 2;
+  width: 310px;
   height: 100%;
   padding-top: 15px;
 
@@ -72,10 +71,10 @@
 }
 
 .info__title {
-  color: $black;
   @include font(30px, 36px);
   width: 200px;
   margin: 25px 0 10px;
+  color: $black;
 
   @include desktop {
     width: auto;
