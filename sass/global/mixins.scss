@@ -1,5 +1,6 @@
 @mixin inner {
   box-sizing: border-box;
+  width: 100%;
   min-width: 320px;
   padding: 0 20px;
   margin: 0 auto;
@@ -23,6 +24,17 @@
   text-indent: 100%;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 //media-queries
