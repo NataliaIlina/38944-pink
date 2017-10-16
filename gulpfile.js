@@ -29,10 +29,10 @@ gulp.task("style", function() {
 });
 
 gulp.task("csscomb", function() {
-  gulp.src("less/blocks/*.less")
+  return gulp.src("sass/blocks/*.scss")
   .pipe(plumber())
   .pipe(csscomb())
-  .pipe(gulp.dest("less/blocks/"))
+  .pipe(gulp.dest("sass/blocks/"))
 })
 
 
