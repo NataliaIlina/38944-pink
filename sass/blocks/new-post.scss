@@ -1,0 +1,267 @@
+.new-post {
+  @include tablet {
+    padding-top: 5px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.new-post__description {
+  @include font(14px, 30px);
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 42px;
+
+    @include tablet {
+      margin-bottom: 70px;
+    }
+
+    @include desktop {
+      margin-bottom: 65px;
+    }
+  }
+
+  @include tablet {
+    @include font(18px, 30px);
+    width: auto;
+  }
+
+}
+
+.new-post__image {
+  margin: 0 auto;
+}
+
+.new-post__image-form {
+  @include inner;
+  padding-top: 20px;
+  background-color: $gray;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    padding: 55px 20px;
+  }
+
+  @include desktop {
+    max-width: 940px;
+    padding: 55px 80px;
+    padding-right: 60px;
+    justify-content: space-between;
+  }
+}
+
+.new-post__change-image {
+  width: 280px;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 40px;
+  }
+
+  @include desktop {
+    width: 410px;
+  }
+}
+
+.new-post__controls {
+  position: relative;
+  box-sizing: border-box;
+  height: 162px;
+  padding: 46px 37px 77px;
+  border-bottom: 1px solid rgba($blue-dark, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include tablet {
+    height: auto;
+    padding: 0;
+    padding-right: 10px;
+    flex-flow: row wrap;
+    border-bottom: none;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.new-post__label {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  cursor: pointer;
+
+  @include tablet {
+    width: 40px;
+    height: 44px;
+    margin-bottom: 27px;
+
+    &--contrast .new-post__icon{
+      width: 16px;
+      height: 16px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 278px;
+      height: 1px;
+      bottom: -15px;
+      left: 0;
+      background-color: rgba($blue-dark, 0.1);
+    }
+  }
+
+  @include desktop {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+
+    &--contrast .new-post__icon{
+      width: auto;
+      height: auto;
+    }
+
+    &::after {
+      width: 410px;
+      bottom: -10px;
+    }
+  }
+
+  &--active .new-post__icon {
+    fill: $pink;
+  }
+
+  &--active .new-post__icon:hover {
+    fill: $pink;
+  }
+}
+
+.new-post__scale {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 240px;
+  padding: 25px 0;
+  margin: 0 20px;
+
+  @include tablet {
+    position: static;
+    width: 210px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 290px;
+    margin: 0 30px;
+  }
+}
+
+.new-post__icon {
+  fill: $pink;
+  margin: auto;
+
+  @include mobile-only {
+    fill: rgba($blue-dark, 0.3);
+
+    &:hover,
+    &:focus {
+      fill: rgba($blue-dark, 0.6);
+    }
+  }
+
+  @include tablet {
+    width: 22px;
+    height: 22px;
+  }
+
+  @include desktop {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.new-post__buttons {
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 0;
+    padding-right: 12px;
+    padding-left: 3px;
+  }
+
+  @include desktop {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.new-post__button {
+  width: 100%;
+  border-color: $pink;
+  color: $pink;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $pink;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  @include desktop {
+    @include font(18px, 18px);
+    width: 45%;
+  }
+
+
+}
+
+.new-post__button--cancel {
+  border-color: rgba($blue-dark, 0.1);
+  color: rgba($blue-dark, 0.1);
+
+  &:hover,
+  &:focus {
+    border-color: rgba($blue-dark, 0.3);
+    color: rgba($blue-dark, 0.3);
+    background-color: transparent;
+  }
+
+  &:active {
+    border-color: rgba($blue-dark, 0.3);
+    background-color:rgba($blue-dark, 0.3);
+    color: rgba($white, 0.3);
+  }
+}

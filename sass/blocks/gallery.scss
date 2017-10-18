@@ -1,0 +1,237 @@
+.gallery {
+  padding-top: 3px;
+  color: $blue-dark;
+  background-color: $white;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @include tablet {
+    padding-top: 45px;
+  }
+
+  @include desktop {
+    padding-top: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.gallery__inner {
+  @include inner;
+  width: 320px;
+
+  @include tablet {
+    width: 660px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  @include desktop {
+    width: 960px;
+  }
+}
+
+.gallery__description {
+  @include inner;
+  @include font(14px, 30px);
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 48px;
+  width: 320px;
+
+  @include tablet {
+    @include font(18px, 30px);
+    width: 530px;
+    margin-bottom: 75px;
+  }
+
+  @include desktop {
+    width: 700px;
+    margin-bottom: 90px;
+  }
+}
+
+.gallery__item {
+  margin: 0;
+  margin-bottom: 19.5px;
+
+  @include tablet {
+    width: 300px;
+    min-height: 455px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+
+  @include desktop {
+    margin-right: 20px;
+    margin-bottom: 55px;
+    min-height: 555px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.gallery__item--top {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  width: 320px;
+
+  .gallery__info {
+    box-sizing: border-box;
+    margin: 0 20px;
+    position: relative;
+
+    &::after {
+      content: "Панорама дня";
+      @include font(12px, 24px);
+      box-sizing: border-box;
+      position: absolute;
+      top: -137px;
+      right: 0;
+      font-weight: $bold;
+      color: $white;
+      background-color: $pink;
+      text-transform: uppercase;
+      width: 140px;
+      text-align: center;
+      padding: 6px;
+
+      @include tablet {
+        top: -453px;
+      }
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 48px;
+
+    .gallery__info {
+      width: 660px;
+      padding-bottom: 15px;
+      margin: 0 auto;
+    }
+
+    .gallery__image {
+      width: 700px;
+      height: 509px;
+      margin: 0 auto;
+    }
+
+    .gallery__likes {
+      position: absolute;
+      right: 15px;
+      top: 25px;
+    }
+
+    .gallery__like-link {
+      margin-left: 20px;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+    margin-bottom: 52px;
+
+    .gallery__info {
+      width: 940px;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+
+    .gallery__image {
+      width: 1200px;
+      height: 506px;
+    }
+
+    .gallery__likes {
+      position: absolute;
+      right: 23px;
+      top: 25px;
+    }
+  }
+}
+
+
+.gallery__info {
+  @include font(14px, 24px);
+  background-color: $gray;
+  padding: 20px;
+  padding-top: 18px;
+  font-weight: $normal;
+
+  @include tablet {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding: 24px 27px;
+  }
+}
+
+.gallery__author {
+  margin: 0;
+  font-weight: $bold;
+
+  @include tablet {
+
+  }
+}
+
+.gallery__time {
+  @include font(12px, 24px);
+  font-weight: $light;
+  text-transform: uppercase;
+}
+
+.gallery__post {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.gallery__likes {
+  @include font(12px, 24px);
+  margin: 0;
+  color: $pink;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.gallery__like-link {
+  @include tablet {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+.gallery__icon {
+  fill: $pink;
+  margin-right: 16px;
+
+  @include tablet {
+    margin-right: 10px;
+  }
+
+  @include desktop {
+    margin-right: 5px;
+  }
+}

@@ -87,6 +87,7 @@
   }
 
   .main-header__slogan {
+    margin: 0 auto;
     display: block;
     margin-top: 100px;
     font-weight: $light;
@@ -97,6 +98,15 @@
       margin-top: 180px;
       @include font(50px, 1.2);
     }
+  }
+}
+
+.main-header__slogan--photo {
+  width: 320px;
+
+  @include tablet {
+    width: 530px;
+    margin-top: 160px;
   }
 }
 
