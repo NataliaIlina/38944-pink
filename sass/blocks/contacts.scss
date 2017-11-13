@@ -139,15 +139,18 @@
 
 .contacts__map-inner {
   height: 200px;
-  background: url("../img/bg-map-mobile@1x.png") no-repeat center;
+  background: url("../img/icon-map-marker.svg") no-repeat center, $gray url("../img/bg-map-mobile@1x.jpg") no-repeat center;
+  @include retina("../img/bg-map-mobile@2x.jpg", 320px, 421px);
 
   @include tablet {
     height: 375px;
-    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background: url("../img/icon-map-marker.svg") no-repeat center,  $gray url("../img/bg-map-tablet@1x.jpg") no-repeat center;
+    @include retina("../img/bg-map-tablet@2x.jpg", 700px, 848px);
   }
 
   @include desktop {
     height: 495px;
-    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background: url("../img/icon-map-marker.svg") no-repeat center,  $gray url("../img/bg-map-desktop@1x.jpg") no-repeat center;
+    @include retina("../img/bg-map-desktop@2x.jpg", 1200px, 976px);
   }
 }

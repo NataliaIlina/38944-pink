@@ -62,6 +62,14 @@
   }
 }
 
+@mixin retina($image, $width, $height) {
+  @media (min-resolution: 1.5dppx),
+         (min-resolution: 144dpi) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
 //helpers
 @mixin line($color) {
   outline: 2px solid $color;

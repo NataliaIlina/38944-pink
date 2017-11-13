@@ -22,12 +22,14 @@
   padding-top: 58px;
   padding-bottom: 305px;
   background: url("../img/iphone-screen-mobile@1x.png") no-repeat center bottom -45px;
+  @include retina("../img/iphone-screen-mobile@2x.png", 157px, 320px);
 
   @include tablet {
     padding-top: 50px;
     padding-bottom: 25px;
     padding-left: 310px;
     background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat 20px top;
+    @include retina("../img/iphone-screen-3-tablet@2x.png", 268px, 481px);
   }
 
   @include desktop {
@@ -58,13 +60,16 @@
     padding: 0;
     padding-top: 355px;
     background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat top center;
+    @include retina("../img/iphone-screen-2-desktop@2x.png", 292px, 302px);
 
     &:first-child {
       background-image: url("../img/iphone-screen-1-desktop@1x.png");
+      @include retina("../img/iphone-screen-1-desktop@2x.png", 292px, 302px);
     }
 
     &:last-child {
       background-image: url("../img/iphone-screen-3-desktop@1x.png");
+      @include retina("../img/iphone-screen-3-desktop@2x.png", 292px, 302px);
     }
   }
 }

@@ -33,17 +33,20 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  @include retina("../img/bg-back-mobile@2x.jpg", 700px, 462px);
 
   @include tablet {
     margin-top: -110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center top;
+    @include retina("../img/bg-back-tablet@2x.jpg", 1200px, 729px);
   }
 
   @include desktop {
     height: 853px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center top;
+    @include retina("../img/bg-back-desktop@2x.jpg", 2560px, 853px);
   }
 }
 
@@ -56,6 +59,7 @@
   height: 286px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
+  @include retina("../img/iphone-hand-mobile@2x.png", 258px, 286px);
 
   @include tablet {
     top: auto;
@@ -65,6 +69,7 @@
     height: 545px;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: right bottom;
+    @include retina("../img/iphone-hand-tablet@2x.png", 700px, 545px);
   }
 
   @include desktop {
@@ -72,6 +77,7 @@
     height: 650px;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: right -145px bottom;
+    @include retina("../img/iphone-hand-desktop@2x.png", 1050px, 645px);
   }
 }
 
