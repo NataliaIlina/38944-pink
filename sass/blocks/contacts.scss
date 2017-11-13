@@ -99,6 +99,17 @@
   @include desktop {
     padding-top: 23px;
   }
+
+  &:hover,
+  &:focus {
+    color: $blue-dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .contacts__map {
@@ -114,7 +125,7 @@
     width: 100%;
     height: 34px;
     background: url("../img/bg-triangle-white-footer.svg") no-repeat top center;
-    background-size: 100% auto;
+    background-size: 100% 100%;
 
     @include tablet {
       height: 72px;

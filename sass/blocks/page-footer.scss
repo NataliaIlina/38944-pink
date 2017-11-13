@@ -95,4 +95,14 @@
   display: block;
   width: 27px;
   height: 34px;
+
+  &:hover .page-footer__icon--academy,
+  &:focus .page-footer__icon--academy {
+    fill: $blue-dark;
+  }
+
+  &:active .page-footer__icon--academy {
+    fill: $blue-dark;
+    opacity: 0.3;
+  }
 }

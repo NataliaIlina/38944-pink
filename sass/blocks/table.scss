@@ -22,10 +22,12 @@ th:first-of-type {
 }
 
 .table__head-cell {
+  box-sizing: border-box;
   position: relative;
   padding: 17px 0;
   background-color: $blue-dark;
-  border: 2px solid #e5e5e5;
+  background-clip: padding-box;
+  border: 2px solid $gray-border;
 
   @include tablet {
     padding: 10px;
@@ -53,6 +55,7 @@ th:first-of-type {
 
   &--hit {
     background: $blue-dark url("../img/bg-hit.svg") no-repeat;
+    background-clip: padding-box;
   }
 
   &--hit::after {

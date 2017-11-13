@@ -4,7 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Пинк</title>
-    <link type="text/css" rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <script>
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <svg style="display:none">
@@ -63,9 +71,9 @@
         </p>
         <section class="gallery__item  gallery__item--top">
           <picture>
-            <source media="(min-width: 960px)" srcset="img/webp/panorama-desktop@1x.webp 1x, img/webp/panorama-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" srcset="img/webp/panorama-tablet@1x.webp 1x, img/webp/panorama-tablet@2x.webp 2x">
-            <source srcset="img/webp/panorama-mobile@1x.webp 1x, img/webp/panorama-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/panorama-desktop@1x.webp 1x, img/webp/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/panorama-tablet@1x.webp 1x, img/webp/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/panorama-mobile@1x.webp 1x, img/webp/panorama-mobile@2x.webp 2x">
 
             <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
@@ -93,9 +101,9 @@
         <div class="gallery__inner">
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-car-desktop@1x.webp 1x, img/webp/photo-car-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-car-tablet@1x.webp 1x, img/webp/photo-car-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-car-mobile@1x.webp 1x, img/webp/photo-car-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-car-desktop@1x.webp 1x, img/webp/photo-car-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-car-tablet@1x.webp 1x, img/webp/photo-car-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-car-mobile@1x.webp 1x, img/webp/photo-car-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
@@ -122,9 +130,9 @@
           </section>
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-drumset-desktop@1x.webp 1x, img/webp/photo-drumset-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-drumset-tablet@1x.webp 1x, img/webp/photo-drumset-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-drumset-mobile@1x.webp 1x, img/webp/photo-drumset-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-drumset-desktop@1x.webp 1x, img/webp/photo-drumset-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-drumset-tablet@1x.webp 1x, img/webp/photo-drumset-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-drumset-mobile@1x.webp 1x, img/webp/photo-drumset-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
@@ -151,9 +159,9 @@
           </section>
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-window-desktop@1x.webp 1x, img/webp/photo-window-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-window-tablet@1x.webp 1x, img/webp/photo-window-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-window-mobile@1x.webp 1x, img/webp/photo-window-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-window-desktop@1x.webp 1x, img/webp/photo-window-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-window-tablet@1x.webp 1x, img/webp/photo-window-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-window-mobile@1x.webp 1x, img/webp/photo-window-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
@@ -180,9 +188,9 @@
           </section>
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-fair-desktop@1x.webp 1x, img/webp/photo-fair-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-fair-tablet@1x.webp 1x, img/webp/photo-fair-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-fair-mobile@1x.webp 1x, img/webp/photo-fair-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-fair-desktop@1x.webp 1x, img/webp/photo-fair-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-fair-tablet@1x.webp 1x, img/webp/photo-fair-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-fair-mobile@1x.webp 1x, img/webp/photo-fair-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
@@ -209,9 +217,9 @@
           </section>
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-pov-desktop@1x.webp 1x, img/webp/photo-pov-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-pov-tablet@1x.webp 1x, img/webp/photo-pov-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-pov-mobile@1x.webp 1x, img/webp/photo-pov-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-pov-desktop@1x.webp 1x, img/webp/photo-pov-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-pov-tablet@1x.webp 1x, img/webp/photo-pov-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-pov-mobile@1x.webp 1x, img/webp/photo-pov-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
@@ -238,9 +246,9 @@
           </section>
           <section class="gallery__item">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/webp/photo-wing-desktop@1x.webp 1x, img/webp/photo-wing-desktop@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/webp/photo-wing-tablet@1x.webp 1x, img/webp/photo-wing-tablet@2x.webp 2x">
-              <source srcset="img/webp/photo-wing-mobile@1x.webp 1x, img/webp/photo-wing-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-wing-desktop@1x.webp 1x, img/webp/photo-wing-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-wing-tablet@1x.webp 1x, img/webp/photo-wing-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-wing-mobile@1x.webp 1x, img/webp/photo-wing-mobile@2x.webp 2x">
 
               <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
@@ -277,9 +285,9 @@
         </p>
         <form class="new-post__image-form">
           <picture>
-            <source media="(min-width: 960px)" srcset="img/webp/photo-road-desktop@1x.webp 1x, img/webp/photo-road-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" srcset="img/webp/photo-road-tablet@1x.webp 1x, img/webp/photo-road-tablet@2x.webp 2x">
-            <source srcset="img/webp/photo-road-mobile@1x.webp 1x, img/webp/photo-road-mobile@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-road-desktop@1x.webp 1x, img/webp/photo-road-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-road-tablet@1x.webp 1x, img/webp/photo-road-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/photo-road-mobile@1x.webp 1x, img/webp/photo-road-mobile@2x.webp 2x">
 
             <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
@@ -295,7 +303,7 @@
                 </svg>
                 <span class="visually-hidden">Обрезать изображение</span>
               </label>
-              <input class="new-post__scale" type="range" value="75" name="scale-crop">
+              <input class="new-post__scale  new-post__scale--crop" type="range" value="75" name="scale-crop">
 
               <label for="fill" class="new-post__label  new-post__label--fill">
                 <svg class="new-post__icon" width="48" height="48">
@@ -303,7 +311,7 @@
                 </svg>
                 <span class="visually-hidden">Применить заливку</span>
               </label>
-              <input class="new-post__scale" type="range" value="15" name="scale-fill">
+              <input class="new-post__scale  new-post__scale--fill" type="range" value="15" name="scale-fill">
 
               <label for="contrast" class="new-post__label  new-post__label--contrast">
                 <svg class="new-post__icon" width="32" height="32">
@@ -311,7 +319,7 @@
                 </svg>
                 <span class="visually-hidden">Изменить контрастность</span>
               </label>
-              <input class="new-post__scale" type="range" value="50" name="scale-contrast">
+              <input class="new-post__scale  new-post__scale--contrast" type="range" value="50" name="scale-contrast">
             </div>
             <div class="new-post__buttons">
               <button class="button  new-post__button" type="submit">Запостить</button>
