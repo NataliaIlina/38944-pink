@@ -1,0 +1,29 @@
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $normal;
+  color: $blue-dark;
+  background-color: $white;
+  min-width: 320px;
+
+  @include desktop {
+    @include font(18px, 30px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

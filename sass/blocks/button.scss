@@ -1,0 +1,29 @@
+.button {
+  @include font(18px, 18px);
+  display: block;
+  box-sizing: border-box;
+  padding: 13px 10px 17px;
+  font-family: inherit;
+  font-weight: $bold;
+  color: $white;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid $white;
+  border-radius: 27px;
+  transition: all 0.3s ease-in;
+
+  @include desktop {
+    @include font(21px, 18px);
+  }
+
+  &:hover,
+  &:focus {
+    color: $pink;
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($pink, 0.3);
+  }
+}

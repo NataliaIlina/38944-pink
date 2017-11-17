@@ -1,0 +1,132 @@
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slider__item {
+  @include font(14px, 30px);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include tablet {
+    @include font(18px, 30px);
+  }
+
+  @include desktop {
+    padding: 0 120px;
+  }
+}
+
+.slider__author {
+  margin-bottom: 12px;
+  font-style: normal;
+  color: $black;
+  @include font(18px, 30px);
+
+  @include mobile-only {
+    order: -1;
+  }
+
+  @include tablet {
+    padding-top: 35px;
+    margin-bottom: 0;
+    @include font(20px, 30px);
+  }
+
+  @include desktop {
+    @include font(24px, 30px);
+  }
+}
+
+.slider__author-info {
+  display: none;
+
+  @include tablet {
+    display: block;
+    padding-top: 3px;
+    color: $blue-dark;
+    @include font( 14px, 30px);
+  }
+
+  @include desktop {
+    @include font(18px, 30px);
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 20px;
+  width: 40px;
+  height: 60px;
+  cursor: pointer;
+  opacity: 0.3;
+  border: none;
+  outline: none;
+
+  @include device-only {
+    display: none;
+  }
+
+  &--prev {
+    left: 0;
+    background: url("../img/icon-review-arrow-left.svg") no-repeat left center;
+  }
+
+  &--next {
+    right: 0;
+    background: url("../img/icon-review-arrow-right.svg") no-repeat right center;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  order: 2;
+  width: 65px;
+  height: 12px;
+  padding: 10px 0;
+  margin: 0 auto;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.slider__toggle {
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+  background-color: rgba($blue-dark, 0.3);
+  border: 3px solid $white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba($blue-dark, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($blue-dark, 0.1);
+  }
+}
+
+.slider__radio--first:checked ~ .slider__controls .slider__toggle--first,
+.slider__radio--second:checked ~ .slider__controls .slider__toggle--second,
+.slider__radio--third:checked ~ .slider__controls .slider__toggle--third {
+  background-color: $white;
+  border-color: $blue-dark;
+}

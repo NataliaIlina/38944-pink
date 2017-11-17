@@ -1,0 +1,256 @@
+.main-header {
+  color: $white;
+  background-color: $blue-dark-bg;
+}
+
+.main-header__top {
+  position: relative;
+  z-index: 5;
+  background-color: rgba($blue-dark-bg, 0.3);
+}
+
+.main-header__inner {
+  @include inner;
+  padding: 0;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+}
+
+.main-header__content {
+  position: relative;
+  height: 730px;
+  margin-top: -66px;
+  background-color: $blue-dark-bg;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  @include retina("../img/bg-back-mobile@2x.jpg", 700px, 462px);
+
+  @include tablet {
+    margin-top: -110px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center top;
+    @include retina("../img/bg-back-tablet@2x.jpg", 1200px, 729px);
+  }
+
+  @include desktop {
+    height: 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center top;
+    @include retina("../img/bg-back-desktop@2x.jpg", 2560px, 853px);
+  }
+}
+
+.main-header__content--index::after {
+  content: "";
+  position: absolute;
+  top: 175px;
+  left: calc(50% - 170px);
+  width: 258px;
+  height: 286px;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  @include retina("../img/iphone-hand-mobile@2x.png", 258px, 286px);
+
+  @include tablet {
+    top: auto;
+    bottom: 0;
+    left: calc(50% - 170px);
+    width: 520px;
+    height: 545px;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: right bottom;
+    @include retina("../img/iphone-hand-tablet@2x.png", 700px, 545px);
+  }
+
+  @include desktop {
+    width: 620px;
+    height: 650px;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: right -145px bottom;
+    @include retina("../img/iphone-hand-desktop@2x.png", 1050px, 645px);
+  }
+}
+
+.main-header__content--inner-page {
+  height: 237px;
+
+  @include tablet {
+    height: 440px;
+  }
+
+  @include desktop {
+    height: 400px;
+  }
+
+  .main-header__slogan {
+    margin: 0 auto;
+    display: block;
+    margin-top: 100px;
+    font-weight: $light;
+    text-align: center;
+    @include font(24px, 1.15);
+
+    @include tablet {
+      margin-top: 180px;
+      @include font(50px, 1.2);
+    }
+  }
+}
+
+.main-header__slogan--photo {
+  width: 280px;
+
+  @include tablet {
+    width: 530px;
+    margin-top: 160px;
+  }
+}
+
+.main-header__content-inner {
+  @include inner;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main-header__promo {
+  z-index: 5;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 30px 0 20px;
+  margin: 0 auto;
+  margin-top: auto;
+  text-align: center;
+
+  @include tablet {
+    width: 300px;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    margin-bottom: 90px;
+  }
+}
+
+.main-header__slogan {
+  display: none;
+
+  @include tablet {
+    display: block;
+    font-weight: $light;
+    @include font(40px, 1.2);
+  }
+
+  @include desktop {
+    margin-bottom: 55px;
+    @include font(50px, 1.2);
+  }
+}
+
+.main-header__description {
+  margin: 10px 0;
+  font-weight: $light;
+  @include font(14px, 24px);
+
+  @include tablet {
+    @include font(18px, 24px);
+  }
+}
+
+.main-header__toggle {
+  @include image-replacement;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 10;
+  width: 52px;
+  height: 66px;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  @include tablet {
+    top: 26px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 52px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+    transition: all 0.3s ease;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $pink;
+    box-shadow: 0 10px 0 0 $pink, 0 20px 0 0 $pink;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.main-header__toggle--cross {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 32px;
+    height: 4px;
+    background-color: $white;
+    transform: rotate(45deg);
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $pink;
+    box-shadow: none;
+  }
+}
+
+.main-header__button {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    margin-bottom: 65px;
+  }
+}

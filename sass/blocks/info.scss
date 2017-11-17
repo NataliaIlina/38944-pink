@@ -1,0 +1,104 @@
+.info {
+  padding-top: 58px;
+  margin-bottom: 100px;
+
+  @include mobile-only {
+    display: none;
+  }
+
+  @include desktop {
+    padding-top: 35px;
+    padding-bottom: 65px;
+    margin-bottom: 75px;
+    background-color: $gray;
+  }
+}
+
+.info__inner {
+  @include inner;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__timer {
+  position: relative;
+  width: 238px;
+  height: 276px;
+  margin-right: 70px;
+  background: url("../img/icon-timer.svg") no-repeat center;
+  background-size: contain;
+
+  @include desktop {
+    width: 298px;
+    height: 345px;
+  }
+
+  &::after {
+    content: "24";
+    @include font(96px, 170px);
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    box-sizing: border-box;
+    width: 202px;
+    height: 202px;
+    font-weight: $bold;
+    color: $pink;
+    text-align: center;
+    border: 14px solid $pink;
+    border-radius: 50%;
+
+    @include desktop {
+      @include font(120px, 200px);
+      bottom: 22px;
+      left: 22px;
+      width: 253px;
+      height: 253px;
+      border-width: 17px;
+    }
+  }
+}
+
+.info__content {
+  flex-grow: 2;
+  width: 310px;
+  height: 100%;
+  padding-top: 15px;
+
+  @include desktop {
+    margin-top: 52px;
+  }
+}
+
+.info__title {
+  @include font(30px, 36px);
+  width: 200px;
+  margin: 25px 0 10px;
+  color: $black;
+
+  @include desktop {
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.info__description {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include desktop {
+    padding-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.info__link {
+  color: $pink;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    opacity: 0.6;
+  }
+}

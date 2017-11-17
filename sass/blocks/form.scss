@@ -1,0 +1,535 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-weight: $normal;
+  color: $blue-dark;
+
+  @include tablet {
+    max-width: 960px;
+    padding: 40px 20px 0;
+    margin: 0 auto;
+  }
+  @include desktop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 52px 10px 0;
+  }
+}
+
+.form__block {
+  position: relative;
+  padding: 34px 20px 40px;
+  margin: 0;
+  border: none;
+
+  &--checkbox {
+    padding-top: 115px;
+  }
+
+  &--apps {
+    padding-top: 112px;
+  }
+
+  &--textarea {
+    padding-top: 72px;
+  }
+
+  @include tablet {
+    padding: 34px 58px 60px;
+    border: 2px solid $gray-border;
+
+    &--name {
+      order: -3;
+      padding-right: 0;
+      padding-left: 0;
+      border: none;
+      margin-bottom: 5px;
+    }
+
+    &--contacts {
+      order: -1;
+      padding: 0 58px;
+      padding-top: 45px;
+      padding-bottom: 20px;
+      margin-bottom: 68px;
+    }
+
+    &--apps {
+      padding-top: 52px;
+      padding-bottom: 55px;
+      padding-right: 0;
+      margin-bottom: 65px;
+    }
+
+    &--checkbox {
+      padding-top: 52px;
+      padding-bottom: 45px;
+      margin-bottom: 66px;
+    }
+
+    &--textarea {
+      padding-top: 45px;
+      padding-bottom: 42px;
+      margin-bottom: 68px;
+    }
+  }
+
+  @include desktop {
+    &--name {
+      width: 435px;
+      padding-bottom: 30px;
+    }
+
+    &--apps {
+      box-sizing: border-box;
+      width: 435px;
+      padding-top: 52px;
+      padding-left: 0;
+    }
+
+    &--contacts {
+      width: 100%;
+      padding-bottom: 8px;
+      padding-top: 42px;
+      margin-bottom: 65px;
+    }
+
+    &--checkbox {
+      padding-top: 52px;
+      padding-right: 10px;
+      padding-bottom: 14px;
+    }
+
+    &--textarea {
+      width: 100%;
+      padding-top: 42px;
+      padding-bottom: 35px;
+      margin-bottom: 62px;
+    }
+  }
+}
+
+.form__inner {
+  background-color: $gray;
+
+  @include tablet {
+    background-color: $white;
+
+    &--apps {
+      order: -2;
+    }
+  }
+
+  @include desktop {
+    &--apps {
+      padding-top: 26px;
+    }
+
+    &--checkbox {
+      width: 100%;
+    }
+  }
+}
+
+.form__title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  top: 0;
+  padding-top: 40px;
+  margin: 0 auto 5px;
+  color: $pink;
+  text-align: center;
+  text-transform: uppercase;
+  @include font(14px, 18px);
+  background-color: transparent;
+
+  @include tablet {
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 30px;
+    padding-top: 0;
+    background-color: $white;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  &--contacts {
+    @include mobile-only {
+      @include visually-hidden;
+    }
+  }
+}
+
+.form__field-wrapper {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 18px;
+  color: $pink;
+  text-transform: uppercase;
+  @include font(14px, 30px);
+
+  @include tablet {
+    &--phone,
+    &--email {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 23px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 58px;
+        height: 58px;
+        background: $gray-border url("../img/icon-phone.svg") no-repeat center;
+      }
+
+      input {
+        order: -1;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--email::after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
+
+  @include desktop {
+    &--phone,
+    &--email {
+      width: 375px;
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.form__label--name {
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 52px;
+
+    span {
+      padding-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 54px;
+
+    span {
+      margin-right: 18px;
+    }
+  }
+}
+
+.form__field {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 62px;
+  padding: 15px;
+  padding-left: 20px;
+  font-family: inherit;
+  font-weight: $normal;
+  color: $blue-dark;
+  border: 2px solid $gray-border;
+  outline: none;
+  @include font(18px, 30px);
+
+  &::placeholder {
+    color: $blue-dark;
+  }
+
+  &:hover {
+    border-color: $blue-dark;
+  }
+
+  &:focus {
+    border-color: $pink;
+  }
+}
+
+.form__controls {
+  @include desktop {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+
+.form__checkbox-label {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 0;
+  padding-left: 70px;
+  margin-bottom: 42px;
+  cursor: pointer;
+  @include font(18px, 30px);
+
+  @include tablet {
+    padding-left: 60px;
+  }
+
+  @include desktop {
+    width: 30%;
+
+    &--selfie {
+      order: 1;
+      margin-right: 52px;
+    }
+
+    &--beach {
+      order: 4;
+      margin-right: 52px;
+    }
+
+    &--norris {
+      order: 2;
+      margin-right: 33px;
+    }
+
+    &--gift {
+      order: 5;
+      margin-right: 33px;
+    }
+
+    &--tower {
+      order: 3;
+      margin-right: 0;
+    }
+
+    &--hotel {
+      order: 6;
+      margin-right: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 39px;
+    height: 39px;
+    background-color: $white;
+    border: 2px solid $gray-border;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $blue-dark;
+  }
+
+  &:active::before {
+    border-color: $pink;
+  }
+}
+
+.form__checkbox:focus + label::before {
+  border-color: $blue-dark;
+}
+
+.form__checkbox:checked + label::before {
+  background: $white url("../img/icon-yes-checkbox.svg") no-repeat center;
+}
+
+.form__radio-label {
+  position: relative;
+  display: block;
+  padding: 5px 0;
+  padding-left: 70px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  @include font(18px, 30px);
+
+  @include tablet {
+    padding-left: 58px;
+  }
+
+  @include desktop {
+    padding-left: 60px;
+    margin-left: 72px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border: 2px solid $gray-border;
+    border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $blue-dark;
+  }
+
+  &:active::before {
+    border-color: $pink;
+  }
+}
+
+.form__radio:focus + label::before {
+  border-color: $blue-dark;
+}
+
+.form__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 12.5px;
+  left: 12.5px;
+  width: 15px;
+  height: 15px;
+  background-color: $pink;
+  border-radius: 50%;
+}
+
+.form__text-area {
+  box-sizing: border-box;
+  width: 100%;
+  height: 202px;
+  padding: 15px;
+  font-family: inherit;
+  font-weight: $normal;
+  color: $blue-dark;
+  border: 2px solid $gray-border;
+  outline: none;
+  @include font(18px, 30px);
+
+  @include tablet {
+    height: 195px;
+  }
+  @include desktop {
+    height: 130px;
+  }
+
+  &::placeholder {
+    color: $blue-dark;
+  }
+
+  &:hover {
+    border-color: $blue-dark;
+  }
+
+  &:focus {
+    border-color: $pink;
+  }
+}
+
+.form__footer {
+  padding: 0 20px;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.form__button {
+  width: 100%;
+  padding: 17px 10px;
+  margin-bottom: 38px;
+  text-transform: uppercase;
+  background-color: $green;
+  border: none;
+  border-radius: 0;
+  @include font(18px, 30px);
+
+  @include tablet {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $green-darken;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $green-darken;
+  }
+
+  &:disabled {
+    background-color: $gray-border;
+  }
+}
+
+.form__comment {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    @include font(14px, 30px);
+  }
+
+  span {
+    color: $pink;
+  }
+
+  .form__comment-desktop {
+    color: $blue-dark;
+
+    @include device-only {
+      display: none;
+    }
+  }
+}

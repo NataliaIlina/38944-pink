@@ -1,0 +1,32 @@
+.feedback {
+  padding-top: 3px;
+
+  @include tablet {
+    padding-top: 42px;
+  }
+
+  @include desktop {
+    padding-top: 20px;
+  }
+}
+
+.feedback__description {
+  text-align: center;
+  @include inner;
+  @include font(14px, 30px);
+
+  @include tablet {
+    width: 550px;
+    @include font(18px, 30px);
+  }
+
+  @include desktop {
+    width: 780px;
+  }
+
+  span {
+    @include mobile-only {
+      display: none;
+    }
+  }
+}

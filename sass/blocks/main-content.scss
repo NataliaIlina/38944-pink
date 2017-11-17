@@ -1,0 +1,42 @@
+.main-content {
+  padding-top: 42px;
+  background-color: $white;
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include desktop {
+    padding-top: 70px;
+  }
+}
+
+.main-content__title {
+  @include font(24px, 1.2);
+  width: 220px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: $light;
+  text-align: center;
+
+  @include tablet {
+    width: 620px;
+    margin-bottom: 0;
+    @include font(40px, 1.2);
+
+    &:last-of-type {
+      width: 450px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @include desktop {
+    width: 750px;
+    @include font(50px, 1.2);
+
+    &:last-of-type {
+      width: 450px;
+      margin-bottom: 75px;
+    }
+  }
+}
