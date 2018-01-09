@@ -58,6 +58,12 @@
   }
 }
 
+.price__table {
+  position: relative;
+  width: 300%;
+  transition: all 0.5s ease-in;
+}
+
 .price__radio--first:checked ~ .price__controls .price__toggle--first,
 .price__radio--second:checked ~ .price__controls .price__toggle--second,
 .price__radio--third:checked ~ .price__controls .price__toggle--third {
@@ -66,15 +72,15 @@
 }
 
 @include mobile-only {
-  .price__radio--first:checked ~ .table {
-    transform: translateX(0);
+  .price__radio--first:checked ~ .price__table {
+    left: 0;
   }
 
-  .price__radio--second:checked ~ .table {
-    transform: translateX(-33.3%);
+  .price__radio--second:checked ~ .price__table {
+    left: -100%;
   }
 
-  .price__radio--third:checked ~ .table {
-    transform: translateX(-66.6%);
+  .price__radio--third:checked ~ .price__table {
+    left: -200%;
   }
 }

@@ -1435,6 +1435,15 @@ img {
   .price__toggle:active {
     background-color: rgba(40, 54, 69, 0.1); }
 
+<<<<<<< HEAD
+=======
+.price__table {
+  position: relative;
+  width: 300%;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in; }
+
+>>>>>>> 6828fdd8353cc7d80a0466907c6a9af250f05237
 .price__radio--first:checked ~ .price__controls .price__toggle--first,
 .price__radio--second:checked ~ .price__controls .price__toggle--second,
 .price__radio--third:checked ~ .price__controls .price__toggle--third {
@@ -1442,6 +1451,7 @@ img {
   border-color: #283645; }
 
 @media (max-width: 660px) {
+<<<<<<< HEAD
   .price__radio--first:checked ~ .table {
     -webkit-transform: translateX(0);
             transform: translateX(0); }
@@ -1460,6 +1470,18 @@ img {
   transition: -webkit-transform 0.5s ease-in;
   transition: transform 0.5s ease-in;
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in; }
+=======
+  .price__radio--first:checked ~ .price__table {
+    left: 0; }
+  .price__radio--second:checked ~ .price__table {
+    left: -100%; }
+  .price__radio--third:checked ~ .price__table {
+    left: -200%; } }
+
+.table {
+  margin-bottom: 30px;
+  border-collapse: collapse; }
+>>>>>>> 6828fdd8353cc7d80a0466907c6a9af250f05237
   @media (min-width: 660px) {
     .table {
       width: 100%;
